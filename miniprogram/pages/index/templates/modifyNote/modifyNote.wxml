@@ -1,0 +1,49 @@
+<template name="modify_note">
+  <darwer
+    show="{{showModifyNoteCard}}"
+    height="60vh"
+    showbar="{{false}}"
+    bind:change="cancelModifyNote"
+  >
+    <form bindsubmit="subModifyNote" bindreset="cancelModifyNote">
+      <view class="modifyBox">
+        <view class="input_note_func_box">
+          <view class="input_note_page">
+            <text class="page_text">页</text>
+            <input
+              class="input_page"
+              type="number"
+              value="{{book.notes[modifyNoteIdx].page}}"
+              name="page"
+            />
+          </view>
+          <view class="input_note_line">
+            <text class="line_text">行</text>
+            <input
+              class="input_line"
+              type="number"
+              value="{{book.notes[modifyNoteIdx].line}}"
+              name="line"
+            />
+          </view>
+        </view>
+        <textarea
+          class="modifyTextarea"
+          value="{{book.notes[modifyNoteIdx].desc}}"
+          maxlength="1000"
+          show-confirm-bar="{{false}}"
+          name="desc"
+        >
+        </textarea>
+        <view class="modify_note_button_list">
+          <button style="font-size: 45rpx; width: 230rpx" type="default" form-type="reset">
+            取消
+          </button>
+          <button style="font-size: 45rpx; width: 230rpx" type="primary" form-type="submit">
+            确认
+          </button>
+        </view>
+      </view>
+    </form>
+  </darwer>
+</template>

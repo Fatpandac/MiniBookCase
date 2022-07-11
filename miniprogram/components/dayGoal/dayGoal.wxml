@@ -1,0 +1,45 @@
+<view class="day_list">
+  <view class="day_circle {{today >= 0 && dayProcess[0] ? 'active' : ''}}"
+    >周日
+    <view
+      class="link"
+      hidden="{{!(today >= 1 && (dayProcess[0] == dayProcess[1] && dayProcess[0]))}}"
+    ></view>
+  </view>
+  <view class="day_circle {{today >= 1 && dayProcess[1] ? 'active' : ''}}"
+    >周一
+    <view
+      class="link"
+      hidden="{{!(today >= 2 && (dayProcess[1] == dayProcess[2] && dayProcess[1]))}}"
+    ></view>
+  </view>
+  <view class="day_circle {{today >= 2 && dayProcess[2] ? 'active' : ''}}"
+    >周二
+    <view
+      class="link"
+      hidden="{{!(today >= 3 && (dayProcess[2] == dayProcess[3] && dayProcess[2]))}}"
+    ></view>
+  </view>
+  <view class="day_circle {{today >= 3 && dayProcess[3] ? 'active' : ''}}"
+    >周三
+    <view
+      class="link"
+      hidden="{{!(today >= 4 && (dayProcess[3] == dayProcess[4] && dayProcess[3]))}}"
+    ></view>
+  </view>
+  <view class="day_circle {{today >= 4 && dayProcess[4] ? 'active' : ''}}"
+    >周四
+    <view
+      class="link"
+      hidden="{{!(today >= 5 && (dayProcess[4] == dayProcess[5] && dayProcess[4]))}}"
+    ></view>
+  </view>
+  <view class="day_circle {{today >= 5 && dayProcess[5] ? 'active' : ''}}"
+    >周五
+    <view
+      class="link"
+      hidden="{{!(today >= 6 && (dayProcess[5] == dayProcess[6] && dayProcess[5]))}}"
+    ></view>
+  </view>
+  <view class="day_circle {{today >= 6 && dayProcess[6] ? 'active' : ''}}">周六 </view>
+</view>

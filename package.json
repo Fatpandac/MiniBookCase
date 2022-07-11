@@ -1,0 +1,38 @@
+{
+  "name": "bookcase",
+  "version": "1.0.0",
+  "description": "mini-bookcase",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run lint && npm run prettier",
+    "lint": "eslint --fix ./miniprogram/**/**/*.js ./miniprogram/**/*.js",
+    "prettier": "prettier --write ./miniprogram/**/**/*.{js,wxml,wxss,json} ./miniprogram/**/**/**/*.{js,wxml,wxss,json} ./miniprogram/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fatpandac/mini-Bookcase.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fatpandac/mini-Bookcase/issues"
+  },
+  "homepage": "https://github.com/Fatpandac/mini-Bookcase#readme",
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.17.0",
+    "eslint": "^8.11.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "prettier": "2.6.0"
+  },
+  "lint-staged": {
+    "*.{js,wxs,sjs}": [
+      "prettier --config .prettierrc.js --write",
+      "eslint --config .eslintrc.js --fix --ext .js"
+    ],
+    "*.{json,wxml,axml,css,wxss,acss,wxml,axml,less,scss}": "prettier --config .prettierrc.js --write"
+  }
+}

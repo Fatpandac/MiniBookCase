@@ -1,0 +1,26 @@
+@media (prefers-color-scheme: dark) {
+  .top_windows {
+    background-color: rgb(17, 17, 17, 0.6);
+    backdrop-filter: blur(10px);
+  }
+
+  .details_title {
+    color: #c5c5c5;
+  }
+
+  .search_input {
+    color: #c5c5c5;
+  }
+
+  .search_font {
+    color: rgb(83, 83, 83);
+  }
+
+  .vLine {
+    border-right: 1px solid #c5c5c5;
+  }
+
+  .finish_button {
+    color: rgb(0, 106, 191);
+  }
+}

@@ -1,0 +1,19 @@
+function showPageLine(page, line) {
+  var content = '';
+  if (page && line) {
+    content =  'P' + page + ', ' + line;
+  } else if (page) {
+    content = 'P' + page
+  }
+
+  return content;
+}
+
+function noteTextShowHide(note) {
+  return note.showAll ? 'height:' + note.height + 'px;' : '';
+}
+
+module.exports = {
+  showPageLine: showPageLine,
+  noteTextShowHide: noteTextShowHide,
+}

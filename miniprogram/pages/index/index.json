@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "slideview": "../../components/slideview/slideview",
+    "cateList": "../../components/cateList/cateList",
+    "darwer": "../../components/drawer/drawer",
+    "rocket": "../../components/rocket/rocket",
+    "notes": "../../components/notes/notes",
+    "cate": "../../components/cate/cate",
+    "mark": "../../components/mark/mark"
+  },
+  "disableScroll": true
+}

@@ -1,0 +1,72 @@
+<wxs src="/utils/sliceTop.wxs" module="tools" />
+
+<template name="top_defulte">
+  <view
+    class="top_init top_windows"
+    animation="{{topAnimation}}"
+    style="height: {{titleInfo.bottom+10}}px;"
+  >
+    <view class="add_search_box" style="top:{{titleInfo.top}}px">
+      <view
+        style=" font-size: {{titleInfo.height}}px; margin-right: 5px; margin-left: {{titleInfo.leftSpace}}px"
+        class="icon-add"
+        wx:if="{{!inSearch}}"
+        bindtap="addBook"
+      ></view>
+      <view
+        style="font-size: {{titleInfo.height}}px; margin-right: 5px; margin-left: {{titleInfo.leftSpace}}px;"
+        class="icon-return"
+        wx:if="{{inSearch}}"
+        bindtap="returnPage"
+      ></view>
+      <cate
+        id="cate"
+        style="height: {{titleInfo.height}}px; width: calc(100% - {{titleInfo.height * 2}}px - 24px);"
+        class="cate_box"
+        books="{{books}}"
+        cateList="{{cateList}}"
+        enable="{{enableCate}}"
+        bind:change="cateChangeBooks"
+      ></cate>
+    </view>
+  </view>
+</template>
+
+<template name="top_sueccss">
+  <view
+    class="top_success_init top_windows"
+    style="height: {{titleInfo.bottom+10}}px;"
+    animation="{{topSuccessAnimation}}"
+    bindtap="topsuccess"
+  >
+    <view class="add_search_box" style="top:{{titleInfo.top}}px">
+      <text class="finish_button" catchtap="topsuccess">完成</text>
+    </view>
+  </view>
+</template>
+
+<template name="top_details">
+  <view class="top_windows" style="height: {{titleInfo.bottom+10}}px;" wx:if="{{click}}">
+    <view class="details_info_box" style="top:{{titleInfo.top}}px">
+      <view
+        style="font-size: {{titleInfo.height}}px; margin-left: {{titleInfo.leftSpace}}px;"
+        mode="aspectFit"
+        class="icon-return"
+        src="/image/return.svg"
+        bindtap="returnPage"
+      ></view>
+      <text
+        wx:if="{{!modify}}"
+        style="line-height: {{titleInfo.height}}px;opacity: {{detailsTopTextOpacity}};"
+        class="details_title"
+        >{{tools.processTopShowText(book.name)}}</text
+      >
+      <text wx:if="{{modify}}" style="line-height: {{titleInfo.height}}px;" class="details_title"
+        >修改书籍信息</text
+      >
+      <view
+        style="width: {{titleInfo.height}}px; height: {{titleInfo.height}}px; margin-right: {{titleInfo.leftSpace}}px;"
+      ></view>
+    </view>
+  </view>
+</template>

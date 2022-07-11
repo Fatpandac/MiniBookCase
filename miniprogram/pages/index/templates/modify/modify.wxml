@@ -1,0 +1,52 @@
+<template name="modify_book">
+  <darwer
+    show="{{showModifyBookCard}}"
+    height="calc(100vh - {{titleInfo.bottom + 10}}px)"
+    enableMove="{{enableMoveDarwer}}"
+    bind:change="cancelBookModify"
+  >
+    <form
+      style="height: 90vh; width: 100vw"
+      catchsubmit="subBookModify"
+      catchreset="cancelBookModify"
+      class="form_style"
+    >
+      <image class="change_image" mode="aspectFit" src="{{book.photoUrl}}"></image>
+      <view class="change_text_box">
+        <view>
+          <text class="change_text">书名</text>
+          <input type="text" class="change_text_input" name="name" value="{{book.name}}" />
+        </view>
+        <view>
+          <text class="change_text">作者</text>
+          <input type="text" class="change_text_input" name="author" value="{{book.author}}" />
+        </view>
+        <view>
+          <text class="change_text">位置</text>
+          <input type="text" class="change_text_input" name="position" value="{{book.position}}" />
+        </view>
+      </view>
+      <view class="change_intro">
+        <text class="intro_text">简介</text>
+        <textarea
+          maxlength="1000"
+          name="desc"
+          class="intro_textarea"
+          value="{{book.desc}}"
+          cursor-spacing="140"
+          show-confirm-bar="{{false}}"
+          bindfocus="switchMoveDarwer"
+          bindblur="switchMoveDarwer"
+        ></textarea>
+      </view>
+      <view class="modify_button">
+        <button style="font-size: 45rpx; width: 230rpx" type="default" form-type="reset">
+          取消
+        </button>
+        <button style="font-size: 45rpx; width: 230rpx" type="primary" form-type="submit">
+          确认
+        </button>
+      </view>
+    </form>
+  </darwer>
+</template>

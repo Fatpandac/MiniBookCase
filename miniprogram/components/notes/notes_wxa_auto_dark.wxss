@@ -1,0 +1,38 @@
+@media (prefers-color-scheme: dark) {
+  .input_note_box {
+    background-color: rgb(255, 255, 255, 0.15);
+    box-shadow: 0px 0px;
+  }
+
+  .textarea_box {
+    background-color: rgb(255, 255, 255, 0.2);
+  }
+
+  .input_note_textarea {
+    background-color: rgb(255, 255, 255, 0);
+    color: #c5c5c5;
+  }
+
+  .input_page {
+    background-color: rgb(255, 255, 255, 0.2);
+    color: #afafaf;
+  }
+
+  .input_line {
+    background-color: rgb(255, 255, 255, 0.2);
+    color: #afafaf;
+  }
+
+  .note {
+    box-shadow: 0px 0px;
+    background-color: rgb(255, 255, 255, 0.2);
+  }
+
+  .input_note_page .page_text {
+    color: #afafaf;
+  }
+
+  .input_note_line .line_text {
+    color: #afafaf;
+  }
+}

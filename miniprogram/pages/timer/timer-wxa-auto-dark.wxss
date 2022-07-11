@@ -1,0 +1,33 @@
+@media (prefers-color-scheme: dark) {
+  .container {
+    background-color: rgb(17, 17, 17);
+  }
+
+  .timer_main {
+    background-color: rgb(0, 113, 195);
+  }
+
+  .timer_time {
+    color: rgb(255, 255, 255, 0.87);
+  }
+
+  .timer_taskName {
+    color: rgb(255, 255, 255, 0.87);
+  }
+
+  .timer_inputname {
+    border-bottom: rgb(0, 0, 0);
+    color: rgb(99, 99, 99);
+  }
+
+  .timer .timer_ctrl {
+    color: rgb(255, 255, 255, 0.87);
+    background-color: rgb(0, 101, 0);
+  }
+
+  .timer--runing .timer_ctrl {
+    background-color: rgb(0, 121, 211);
+    border: rgb(0, 0, 0);
+    border: 1px dashed #dedede;
+  }
+}

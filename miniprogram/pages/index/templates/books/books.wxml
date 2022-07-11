@@ -1,0 +1,115 @@
+<template name="books">
+  <!-- 当书籍列表为空时 -->
+  <view class="book_empty" wx:if="{{books.length + inSearch === 0}}">
+    <text class="book_empty_text">点击 + 号</text>
+    <text class="book_empty_text">扫码添加书籍</text>
+  </view>
+  <scroll-view
+    style="width: 100%; height: 100vh"
+    scroll-y
+    refresher-enabled
+    refresher-triggered="{{refreshing}}"
+    bindrefresherrefresh="refreshBooks"
+    scroll-top="{{scrollIndexTop}}"
+    scroll-with-animation
+    bindscroll="listenScroll"
+    refresher-background="{{theme === 'dark' ? '#121212' : ''}}"
+    refresher-default-style="none"
+  >
+    <view style="height: {{titleInfo.bottom + 10}}px;" class="empty"></view>
+    <view class="search_box">
+      <input
+        class="search_input"
+        placeholder="请输入搜索的书名"
+        placeholder-class="search_font"
+        placeholder-style="color: {{theme === 'dark' ? '#c5c5c5' : ''}}"
+        value="{{searchBookName}}"
+        confirm-type="search"
+        disabled="{{choice}}"
+        bindinput="inputting"
+        bindconfirm="search"
+        bindfocus="closeAllSlideview"
+      />
+      <view
+        class="icon-search"
+        style="font-size: {{titleInfo.height - 5}}px; margin: auto;"
+        mode="aspectFill"
+        bindtap="search"
+      ></view>
+    </view>
+    <view class="books_scroll_view">
+      <block wx:for="{{ books }}" wx:key="index">
+        <view
+          class="animation_init books_show_box"
+          hover-class="books_show_box_hover"
+          hover-stay-time="100"
+          animation="{{item.animation}}"
+          bindlongpress="longPressBookCard"
+          bindtap="{{choice ? 'circle' : !item.showSlide ? 'bookInformation' : ''}}"
+          data-key="{{index}}"
+          hidden="{{!item.display}}"
+        >
+          <slideview
+            class="slideview_box"
+            buttons="{{slideButtons}}"
+            data-index="{{index}}"
+            bindshow="closeOtherSlide"
+            bindhide="closeThisSlide"
+            disable="{{item.disableSlideview}}"
+            show="{{item.showSlide}}"
+            bindbuttontap="slideButtonTap"
+          >
+            <mark status="{{item.status}}"></mark>
+            <view class="show_base_info">
+              <view
+                style="{{item.isChecked? 'background:#00a3ff;' : ''}}"
+                class="round"
+                animation="{{circleAnimation}}"
+                wx:if="{{ choice }}"
+              ></view>
+              <share-element
+                class="books_image"
+                key="book_image"
+                duration="500"
+                transform="{{transformIdx === index}}"
+              >
+                <image
+                  style="max-width: 100%; max-height: 100%"
+                  mode="aspectFit"
+                  src="{{ item.photoUrl || 'cloud://cloud1-5genntop5f72fc26.636c-cloud1-5genntop5f72fc26-1308479694/book.png' }}"
+                ></image>
+              </share-element>
+              <view class="books_info_box">
+                <share-element
+                  class="books_position_text"
+                  key="position"
+                  duration="500"
+                  transform="{{transformIdx === index}}"
+                >
+                  {{ item.position }}
+                </share-element>
+                <share-element
+                  class="books_name_text"
+                  key="name"
+                  duration="500"
+                  transform="{{transformIdx === index}}"
+                >
+                  {{ item.name }}
+                </share-element>
+                <share-element
+                  class="books_author_text"
+                  key="author"
+                  duration="500"
+                  transform="{{transformIdx === index}}"
+                >
+                  {{ item.author }}
+                </share-element>
+              </view>
+            </view>
+          </slideview>
+        </view>
+      </block>
+    </view>
+    <view class="{{!choice ? 'blank_bottom_before' : 'blank_bottom_after'}}"></view>
+  </scroll-view>
+</template>

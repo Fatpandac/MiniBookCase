@@ -1,0 +1,43 @@
+{
+  "pages": ["pages/index/index", "pages/timer/timer", "pages/total/total"],
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "miniProgram",
+    "backgroundColor": "@bgColor",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false,
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "color": "@tabFontColor",
+    "selectedColor": "@tabSelectedColor",
+    "backgroundColor": "@tabBgColor",
+    "borderStyle": "@tabBorderStyle",
+    "list": [
+      {
+        "iconPath": "@bookcasePath",
+        "selectedIconPath": "@bookcaseSelectPath",
+        "pagePath": "pages/index/index",
+        "text": "书柜"
+      },
+      {
+        "iconPath": "@clockPath",
+        "selectedIconPath": "@clockSelectPath",
+        "pagePath": "pages/timer/timer",
+        "text": "阅读计时"
+      },
+      {
+        "iconPath": "@totalPath",
+        "selectedIconPath": "@totalSelectPath",
+        "pagePath": "pages/total/total",
+        "text": "统计"
+      }
+    ]
+  },
+  "style": "v2",
+  "themeLocation": "theme.json",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "darkmode": true
+}

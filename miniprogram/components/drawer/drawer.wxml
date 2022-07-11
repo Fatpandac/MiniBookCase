@@ -1,0 +1,12 @@
+<view class="intro_top_init intro_top" animation="{{backgroundAnimation}}"></view>
+<view
+  style="height: {{height}};transform: translateY({{moveDistance}}px);bottom: {{moveDistance}}px;"
+  class="introduction_init introduction_box"
+  bindtouchmove="touchMove"
+  bindtouchstart="touchStart"
+  bindtouchend="touchEnd"
+  animation="{{inputCardAnimation}}"
+>
+  <view class="cancel_bar" hidden="{{!showbar}}"></view>
+  <slot></slot>
+</view>

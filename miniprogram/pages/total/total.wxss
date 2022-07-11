@@ -1,0 +1,26 @@
+.icon_box {
+  position: relative;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.charts-box {
+  width: 100%;
+  height: 500rpx;
+  margin: auto;
+  position: relative;
+}
+
+.process_title {
+  font-size: 30rpx;
+  color: #159cdc;
+  position: absolute;
+  left: 50%;
+  bottom: 5px;
+  transform: translateX(-50%);
+}
+
+@import '../../components/weui-wxss/dist/style/weui-wxa-auto-dark.wxss';
+
+@import 'total-wxa-auto-dark.wxss';

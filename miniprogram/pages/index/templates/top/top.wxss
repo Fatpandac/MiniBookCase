@@ -1,0 +1,56 @@
+.top_init {
+  opacity: 0;
+}
+
+.top_windows {
+  width: 100%;
+  position: fixed;
+  box-shadow: 0px 0px 10px 0px rgba(80, 79, 79, 0.4);
+  z-index: 14;
+  backdrop-filter: blur(10px);
+  background: rgb(255, 255, 255, 0.6);
+}
+
+.details_info_box {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.top_success_init {
+  opacity: 0;
+  z-index: 8;
+  transform: translateY(-400);
+}
+
+.add_search_box {
+  width: 100%;
+  bottom: 0px;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.cate_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* 选择状态中顶部 完成  */
+.finish_button {
+  margin-left: 15px;
+  font-size: 20px;
+  color: #00a3ff;
+}
+
+.details_title {
+  font-size: 35rpx;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+@import 'top-wxa-auto-dark.wxss';

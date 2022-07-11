@@ -1,0 +1,25 @@
+@media (prefers-color-scheme: dark) {
+  .intro_top {
+    background: rgba(169, 165, 165, 0.247);
+  }
+
+  .introduction_box {
+    background-color: rgb(18, 18, 18);
+  }
+
+  .cancel_bar {
+    background-color: rgb(81, 81, 81);
+  }
+
+  .intro_text {
+    color: rgb(117, 117, 117);
+  }
+
+  .input_intro {
+    background-color: rgb(255, 255, 255, 0.12);
+  }
+
+  .books_intro_box {
+    background-color: rgb(255, 255, 255, 0.12);
+  }
+}

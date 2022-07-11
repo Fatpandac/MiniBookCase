@@ -1,0 +1,12 @@
+function processTopShowText(text) {
+  return text.length > 8 ? text.slice(0,8).concat('...') : text;
+}
+
+function getTopUsedWidth(titleInfo) {
+  return titleInfo.height + titleInfo.width + (titleInfo.leftSpace * 2) + 10;
+}
+
+module.exports = {
+  processTopShowText: processTopShowText,
+  getTopUsedWidth: getTopUsedWidth,
+}

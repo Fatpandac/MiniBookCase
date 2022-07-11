@@ -1,0 +1,64 @@
+@media (prefers-color-scheme: dark) {
+  page {
+    background-color: rgb(18, 18, 18);
+  }
+
+  .search_box {
+    background-color: rgba(255, 255, 255, 0.12);
+  }
+
+  .book_empty_text {
+    color: rgb(144, 144, 144);
+  }
+
+  .books_scroll_view {
+    background-color: rgb(17, 17, 17);
+  }
+
+  .books_show_box {
+    box-shadow: 0px 0px;
+    background-color: rgb(255, 255, 255, 0.15);
+  }
+
+  .books_show_box_hover {
+    opacity: 0.9;
+    background: rgb(255, 255, 255, 0.2);
+  }
+
+  .books_position_text {
+    color: rgb(255, 255, 255, 0.87);
+  }
+
+  .books_name_text {
+    color: rgb(255, 255, 255, 0.6);
+  }
+
+  .books_author_text {
+    color: rgb(255, 255, 255, 0.38);
+  }
+
+  .round {
+    background: rgba(0, 0, 0, 0);
+  }
+
+  .weui-slideview__btn-group_default .no_sign {
+    background-color: #c7c7cc;
+    color: #ffffff;
+  }
+
+  .weui-slideview__btn-group_default .readed_btn {
+    background: gold;
+  }
+
+  .weui-slideview__btn-group_default .reading_btn {
+    background: #00da09;
+  }
+
+  .Blank_bottom_before {
+    background-color: rgb(18, 18, 18);
+  }
+
+  .round {
+    border: 1px solid rgb(255, 255, 255, 0.6);
+  }
+}

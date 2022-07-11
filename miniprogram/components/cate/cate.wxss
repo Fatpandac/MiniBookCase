@@ -1,0 +1,128 @@
+.bg {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  z-index: 14;
+}
+
+.cate_text {
+  font-size: 40rpx;
+  line-height: 40rpx;
+}
+
+.cate_icon {
+  width: 25rpx;
+  height: 25rpx;
+}
+
+.list_box {
+  width: 85%;
+  top: 180rpx;
+  right: 7.5%;
+  z-index: 15;
+  position: fixed;
+  background-color: white;
+  border-radius: 25rpx;
+  border: 0.5px solid gray;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-30px) scaleX(0.9) scaleY(0.9);
+  transition: 0.5s;
+}
+
+.list_box.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0) scaleX(1) scaleY(1);
+}
+
+.cate_list {
+  max-height: 450rpx;
+}
+
+.func_list {
+  height: 80rpx;
+  border-radius: 0rpx 0rpx 25rpx 25rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f5f570;
+}
+
+.icon_vector_ve {
+  font-size: 25rpx;
+}
+
+.icon {
+  font-size: 50rpx;
+  margin: 10rpx;
+  display: inherit;
+}
+
+.icon-vector:before {
+  content: '\e90f';
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-choose_list:before {
+  content: '\e904';
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-arrleft:before {
+  content: '\e903';
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-add:before {
+  content: '\e900';
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-delete:before {
+  content: '\e905';
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@import './cate-wxa-auto-dark.wxss';

@@ -1,0 +1,108 @@
+<wxs src="/utils/parseDate.wxs" module="formatDate"></wxs>
+
+<template name="book_details">
+  <page-container
+    show="{{click}}"
+    z-index="12"
+    overlay="{{false}}"
+    duration="500"
+    position="center"
+    bind:leave="returnBySlide"
+    bind:beforeleave="holdPageContainer"
+  >
+    <scroll-view
+      scroll-y
+      scroll-with-animation
+      scroll-top="{{scrollTop}}"
+      bindscroll="listenDetailsScroll"
+      style="width: 100%; height: 100vh"
+      class="bookDetails_scroll"
+    >
+      <view style="height: {{titleInfo.bottom + 10}}px;" class="empty"></view>
+      <view class="details_information_box">
+        <share-element
+          class="details_information_image"
+          key="book_image"
+          duration="500"
+          transform="{{!(showModifyBookCard || showModifyNoteCard)}}"
+        >
+          <image
+            style="max-width: 100%; max-height: 100%"
+            mode="aspectFit"
+            src="{{books[transformIdx].photoUrl || 'cloud://cloud1-5genntop5f72fc26.636c-cloud1-5genntop5f72fc26-1308479694/book.png'}}"
+          ></image>
+        </share-element>
+        <view class="details_information_content">
+          <share-element
+            class="content_text_position"
+            key="position"
+            duration="500"
+            transform="{{!(showModifyBookCard || showModifyNoteCard)}}"
+          >
+            {{books[transformIdx].position}}
+          </share-element>
+          <share-element
+            id="book_name"
+            class="content_text_name"
+            key="name"
+            duration="500"
+            transform="{{!(showModifyBookCard || showModifyNoteCard)}}"
+          >
+            {{books[transformIdx].name}}
+          </share-element>
+          <share-element
+            class="content_text_author"
+            key="author"
+            duration="500"
+            transform="{{!(showModifyBookCard || showModifyNoteCard)}}"
+          >
+            {{books[transformIdx].author}}
+          </share-element>
+        </view>
+      </view>
+      <view class="paragraph {{click ? 'enter' : ''}}">
+        <view style="width: 100%; display: flex; justify-content: center">
+          <view class="info_middle_box">
+            <view class="into_time_box">
+              <text class="into_time_text">入柜时间:</text>
+              <text class="into_time_text" style="margin-left: 5px"
+                >{{formatDate.TimeToDate(books[transformIdx].date, 'YYYY-MM-DD hh:mm')}}</text
+              >
+            </view>
+            <view
+              bindtap="gotoModifyBook"
+              style="font-size: 50rpx"
+              mode="aspectFit"
+              class="icon-edit"
+            ></view>
+          </view>
+        </view>
+        <view class="search_introduction" hidden="{{books[transformIdx].desc.length === 0}}">
+          <text class="search_introduction_text">简介</text>
+          <view class="search_middle" bindtap="IntroductionExpansion">
+            <view wx:if="{{!introEx}}" style="color: #c5c5c5" class="search_middle_text" user-select
+              >{{books[transformIdx].desc}}</view
+            >
+          </view>
+          <view
+            class="icon-vector"
+            style="font-size: 40rpx"
+            bindtap="IntroductionExpansion"
+            animation="{{vectorAnimation}}"
+          ></view>
+        </view>
+        <view class="introductions" wx:if="{{introEx}}">
+          <text style="width: 90%" user-select>{{books[transformIdx].desc}}</text>
+        </view>
+        <view class="line"></view>
+        <notes
+          id="notes"
+          book="{{books[transformIdx]}}"
+          bind:modify="modifyNote"
+          bind:updateNote="updateNote"
+        ></notes>
+        <view style="width: 100%; height: 200rpx"></view>
+      </view>
+    </scroll-view>
+  </page-container>
+</template>

@@ -1,0 +1,21 @@
+<view hidden="{{!show}}" class="bg" bindtap="showCate"> </view>
+<view bindtap="showCate" style="display: flex">
+  <text class="cate_text">{{ cateText || '全部书籍'}}</text>
+  <view class="icon-vector icon_vector_ve" hidden="{{!enable}}"></view>
+</view>
+<view class="list_box {{show ? 'show' : ''}}">
+  <cateList
+    class="cate_list"
+    onEdit="{{onEdit}}"
+    cateList="{{cateList}}"
+    scrollPos="{{scrollPos}}"
+    bind:choose="{{onEdit ? 'chooseCate' : 'switchCate'}}"
+    bind:rename="renameCate"
+  ></cateList>
+  <view class="func_list">
+    <view class="icon-choose_list icon" hidden="{{onEdit}}" bindtap="editCate"></view>
+    <view class="icon-arrleft icon" hidden="{{!onEdit}}" bindtap="quitEdit"></view>
+    <view class="icon-add icon" hidden="{{onEdit}}" bindtap="addCate"></view>
+    <view class="icon-delete icon" hidden="{{!onEdit}}" bindtap="delCate"></view>
+  </view>
+</view>

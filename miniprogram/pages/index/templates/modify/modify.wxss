@@ -1,0 +1,66 @@
+.form_style {
+  width: 100%;
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+}
+
+.change_image {
+  width: 90vw;
+  height: 20vh;
+}
+
+.change_text_box {
+  width: 90vw;
+  height: 30vh;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-around;
+}
+
+.change_text_input {
+  height: 75rpx;
+  margin-top: 10rpx;
+  border-radius: 25rpx;
+  font-size: 40rpx;
+  padding: 0rpx 25rpx;
+  background-color: #f0f0f0;
+}
+
+.change_intro {
+  width: 90vw;
+  margin-top: 15rpx;
+  font-size: 40rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.intro_text {
+  color: #7a7a7a;
+  font-size: 30rpx;
+  margin-bottom: 15rpx;
+}
+
+.intro_textarea {
+  width: auto;
+  height: 20vh;
+  border-radius: 10px;
+  padding: 10rpx 25rpx 0rpx 25rpx;
+  background-color: #f0f0f0;
+}
+
+.change_text {
+  color: #7a7a7a;
+  font-size: 30rpx;
+}
+
+.modify_button {
+  margin-top: 30rpx;
+  display: flex;
+  align-items: flex-start;
+  background-color: white;
+}
+
+@import 'modify-wxa-auto-dark.wxss';

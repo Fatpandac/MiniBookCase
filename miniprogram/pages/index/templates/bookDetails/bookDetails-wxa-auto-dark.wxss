@@ -1,0 +1,44 @@
+@media (prefers-color-scheme: dark) {
+  .bookDetails_scroll {
+    background-color: rgb(18, 18, 18);
+  }
+
+  .content_text {
+    color: rgb(103, 100, 100);
+  }
+  .content_text_position {
+    color: rgb(255, 255, 255, 0.87);
+  }
+
+  .content_text_name {
+    color: rgb(255, 255, 255, 0.6);
+  }
+
+  .content_text_author {
+    color: rgb(255, 255, 255, 0.38);
+  }
+
+  .search_introduction_text {
+    color: rgb(255, 255, 255, 0.8);
+  }
+
+  .introductions text {
+    color: rgb(255, 255, 255, 0.38);
+  }
+
+  .into_time_text {
+    color: rgb(255, 255, 255, 0.38);
+  }
+
+  .line {
+    background: rgb(45, 45, 45);
+  }
+
+  .white_note {
+    box-shadow: rgb(0, 0, 0);
+  }
+
+  .note {
+    box-shadow: rgb(0, 0, 0);
+  }
+}

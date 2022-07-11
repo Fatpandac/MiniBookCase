@@ -1,0 +1,44 @@
+<import src="./templates/top/top" />
+<import src="./templates/books/books" />
+<import src="./templates/bottom/bottom" />
+<import src="./templates/introduction/introduction"></import>
+<import src="./templates/bookDetails/bookDetails"></import>
+<import src="./templates/modify/modify"></import>
+<import src="./templates/modifyNote/modifyNote"></import>
+
+<template
+  is="top_defulte"
+  data="{{ titleInfo, inSearch, enableCate, books, cateList, choice, topAnimation }}"
+  hidden="{{click}}"
+></template>
+<template is="top_sueccss" data="{{ titleInfo, choice, topSuccessAnimation }}"></template>
+<template
+  is="top_details"
+  data="{{ titleInfo, click, modify, detailsTopTextOpacity, book}}"
+></template>
+
+<rocket scrollPos="{{scrollPos}}" bind:tap="topping"></rocket>
+
+<template
+  is="books"
+  data="{{ titleInfo, searchBookName, theme, books, choice, inSearch, refreshing, scrollIndexTop, transformIdx, slideButtons, circleAnimation, markAnimation}}"
+></template>
+
+<template
+  is="book_details"
+  data="{{titleInfo, books, introEx, click, modify, scrollTop, showModifyBookCard, showModifyNoteCard, vectorAnimation, transformIdx}}"
+></template>
+
+<template is="introduction" data="{{book, showInputCard}}"></template>
+
+<template
+  is="bottom"
+  data="{{titleInfo, books, choice, theme, showChooseCate, cateList, bottomAnimation}}"
+></template>
+
+<template
+  is="modify_book"
+  data="{{showModifyBookCard, titleInfo, enableMoveDarwer, book}}"
+></template>
+
+<template is="modify_note" data="{{showModifyNoteCard, modifyNoteIdx, book}}"></template>

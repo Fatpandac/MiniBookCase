@@ -1,0 +1,3 @@
+<view class="mark_box" style="background-color: {{color}};" animation="{{markAnimation}}">
+  <text decode>&nbsp;&nbsp;</text>
+</view>

@@ -1,0 +1,11 @@
+<view class="content">
+  <view
+    class="contentInner showArea {{!onFold ? 'text-clamp' + maxline : ''}}"
+    bindtap="{{foldable ? 'handleFold' : ''}}"
+  >
+    <text class="content_text" selectable>{{content}}</text>
+  </view>
+  <view class="contentInner hideArea">
+    <text class="content_text">{{content}}</text>
+  </view>
+</view>

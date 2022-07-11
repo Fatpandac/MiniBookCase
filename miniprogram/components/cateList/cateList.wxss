@@ -1,0 +1,125 @@
+.cate_scroll_view {
+  max-height: 450rpx;
+}
+
+.cate_item_box {
+  height: 90rpx;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  border-bottom: 1px solid #cfcfcf85;
+  position: relative;
+}
+
+.cate_item_box_hover {
+  border-radius: 25rpx 25rpx 0rpx 0rpx;
+  opacity: 0.9;
+  background: #f7f7f7;
+  z-index: 14;
+}
+
+.cate_item_icon {
+  font-size: 50rpx;
+  margin: 5rpx;
+  display: flex;
+}
+
+.cate_item_choose_round {
+  width: 35rpx;
+  height: 35rpx;
+  margin: 10rpx;
+  border: 1px solid black;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0);
+  transition: background 0.3s;
+}
+
+.cate_item_text {
+  max-width: 50%;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.cate_item_count {
+  font-size: 30rpx;
+  line-height: 50rpx;
+  margin-left: 20rpx;
+  color: #cfcfcf;
+}
+
+.cate_item_edit {
+  font-size: 50rpx;
+  margin: 5rpx;
+  right: 5rpx;
+  display: inherit;
+  position: absolute;
+}
+
+.icon-allbooks:before {
+  content: '\e902';
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-readed:before {
+  content: '\e909';
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-reading:before {
+  content: '\e90a';
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-editcate:before {
+  content: '\e907';
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-otherbooks:before {
+  content: '\e908';
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@import './cateList-wxa-auto-dark.wxss';

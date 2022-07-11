@@ -1,0 +1,10 @@
+@media (prefers-color-scheme: dark) {
+  .icon_box {
+    background: #757575;
+    color: rgba(255, 255, 255, 0.801);
+  }
+
+  .process_title {
+    color: rgb(0, 116, 177);
+  }
+}

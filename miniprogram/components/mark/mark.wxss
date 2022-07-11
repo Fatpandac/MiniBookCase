@@ -1,0 +1,18 @@
+.mark_box {
+  width: 50rpx;
+  height: 70rpx;
+  right: 50rpx;
+  top: 0rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  z-index: 8;
+  clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%, 50% 65%);
+}
+
+.mark_text {
+  width: 22rpx;
+  font-size: 22rpx;
+  font-weight: bold;
+}

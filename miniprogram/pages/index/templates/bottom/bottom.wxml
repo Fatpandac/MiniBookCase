@@ -1,0 +1,42 @@
+<template name="bottom">
+  <wxs src="./utils.wxs" module="bottomUtils"></wxs>
+  <view class="bottom_box" animation="{{bottomAnimation}}">
+    <view class="bottom_del_btn">
+      <view
+        style="{{bottomUtils.processEnable(books) ? '' : bottomUtils.processTheme(theme) ? 'color: #7d7d7d;' : 'color: #cfcfcf'}}"
+        class="icon-delete icon_delete_style"
+        bindtap="{{bottomUtils.processEnable(books) ? 'bottomDelete' : ''}}"
+      ></view>
+    </view>
+    <view class="bottom_cate_btn">
+      <view
+        style="{{bottomUtils.processEnable(books) ? '' : bottomUtils.processTheme(theme) ? 'color: #7d7d7d;' : 'color: #cfcfcf'}}"
+        class="icon-addintocate icon_addintocate_style"
+        bindtap="{{bottomUtils.processEnable(books) ? 'chooseCate' : ''}}"
+      ></view>
+      <text
+        style="{{bottomUtils.processEnable(books) ? '' : bottomUtils.processTheme(theme) ? 'color: #7d7d7d;' : 'color: #cfcfcf'}}"
+        class="bottom_btn_text"
+        bindtap="{{bottomUtils.processEnable(books) ? 'chooseCate' : ''}}"
+        >添加到...</text
+      >
+    </view>
+  </view>
+  <view style="{{showChooseCate ? 'top: ' + titleInfo.top + 'px;': ''}}" class="cate_list">
+    <view class="cate_list_title">
+      <text class="done_cate" bindtap="cateChooseDone">完成</text>
+      <text style="line-height: {{titleInfo.height}}px;" class="cate_title">添加到分类</text>
+      <text class="empty" decode>完成</text>
+    </view>
+    <cateList
+      extStyle="max-height: 90vh;"
+      showAll="{{false}}"
+      cateList="{{cateList}}"
+      bind:choose="addIntoCate"
+    ></cateList>
+    <view hover-class="cate_item_box_hover" class="cate_item_box" bindtap="addCate">
+      <view class="icon-add" style="font-size: 50rpx; margin: 5rpx" />
+      <text class="cate_item_text">新建分类...</text>
+    </view>
+  </view>
+</template>

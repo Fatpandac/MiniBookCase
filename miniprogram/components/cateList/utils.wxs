@@ -1,0 +1,33 @@
+function showOrHideIcon(onEdit, index) {
+  return onEdit && [0,1,2].indexOf(index) < 0;
+}
+
+function showOrHideRound(onEdit, index) {
+  return !(onEdit && [0,1,2].indexOf(index) < 0);
+}
+
+function isEnable(showAll, index) {
+  if (showAll) return true;
+
+  return [0,1,2].indexOf(index) < 0;
+}
+
+function processIconSrc(cate) {
+  var src = 'icon-otherbooks'
+  if (cate === '全部书籍') {
+    src = 'icon-allbooks'
+  } else if (cate === '已读') {
+    src = 'icon-readed'
+  } else if (cate === '在读') {
+    src = 'icon-reading'
+  }
+
+  return src;
+}
+
+module.exports = {
+  showOrHideIcon: showOrHideIcon,
+  showOrHideRound: showOrHideRound,
+  isEnable: isEnable,
+  processIconSrc: processIconSrc
+}

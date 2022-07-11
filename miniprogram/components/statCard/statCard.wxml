@@ -1,0 +1,20 @@
+<view class="card">
+  <view class="title">
+    <text class="title_text">{{cardName}}</text>
+    <view class="switch_btn">
+      <block wx:for="{{btnList}}" wx:key="index">
+        <text class="btn_text" wx:if="{{index < 3}}" data-idx="{{index}}" bindtap="switchType"
+          >{{item}}</text
+        >
+      </block>
+      <view
+        style="left: calc(100%/{{btnList.length}}*{{idx}}); width: calc(100%/{{btnList.length}});"
+        class="btn"
+        >{{btnList[idx]}}</view
+      >
+    </view>
+  </view>
+  <view class="charts_box">
+    <slot></slot>
+  </view>
+</view>

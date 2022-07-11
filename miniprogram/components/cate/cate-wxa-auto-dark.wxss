@@ -1,0 +1,9 @@
+@media (prefers-color-scheme: dark) {
+  .list_box {
+    background-color: rgb(18, 18, 18);
+    border: 0.5px solid #ffffff50;
+  }
+  .func_list {
+    background-color: rgb(18, 18, 18);
+  }
+}

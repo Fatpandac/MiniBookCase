@@ -1,0 +1,41 @@
+<view
+  style="height: {{titleInfo.height}}px; width: {{titleInfo.height}}px; top: {{titleInfo.top}}px; left: {{titleInfo.leftSpace}}px; font-size: {{titleInfo.height}}px;"
+  class="icon_box icon-export"
+  bindtap="export"
+></view>
+<view style="margin-top: {{titleInfo.bottom + 10}}px;" class="charts-box">
+  <qiun-wx-ucharts
+    type="arcbar"
+    opts="{{todayProcessOpts}}"
+    chartData="{{todayChartData}}"
+    canvas2d="{{true}}"
+    canvasId="pLjHKDCkUHIfXjWVkbitaChLtlHFHAtn"
+  />
+  <picker
+    bindchange="updateGoal"
+    value="{{goal-5}}"
+    range="{{goalRange}}"
+    header-text="每日阅读目标"
+  >
+    <text class="process_title">调整目标</text>
+  </picker>
+</view>
+<dayGoal dayProcess="{{dayProcess}}"></dayGoal>
+<statCard bind:switch="readTimeSwitch" idx="{{initReadTimeBtn}}" cardName="看书时长">
+  <qiun-wx-ucharts
+    type="line"
+    opts="{{readTimeChartOpts}}"
+    chartData="{{readTimeChartData}}"
+    canvas2d="{{true}}"
+    canvasId="JcrSwefIBOQKqUeHbeYlcVCuPoKBDDoK"
+  />
+</statCard>
+<statCard bind:switch="newBookSwitch" idx="{{initNewBookBtn}}" cardName="新增书籍">
+  <qiun-wx-ucharts
+    type="column"
+    opts="{{newBookChartOpts}}"
+    chartData="{{newBookChartData}}"
+    canvas2d="{{true}}"
+    canvasId="pfTAgPMelMansTVuufzGWxVMrAANPero"
+  />
+</statCard>

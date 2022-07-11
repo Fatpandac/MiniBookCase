@@ -1,0 +1,73 @@
+<wxs src="../../utils/parseDate.wxs" module="formatDate"></wxs>
+<wxs src="./notesUtils.wxs" module="notesUtils"></wxs>
+
+<view class="input_note_box">
+  <view class="textarea_box">
+    <textarea
+      id="notesTextarea"
+      maxlength="1000"
+      cursor-spacing="190"
+      value="{{inputNote}}"
+      class="input_note_textarea"
+      placeholder="写点什么吧......"
+      placeholder-style="color: #c5c5c5; font-size:30rpx"
+      bindinput="notesInput"
+      show-confirm-bar="{{false}}"
+    >
+    </textarea>
+    <text style="color: {{inputCountColor}};" class="input_count">{{inputLength}}/200</text>
+  </view>
+  <form bindsubmit="doneWriteNote" hidden="{{!inputNote}}">
+    <view class="input_note_func_box">
+      <view class="input_note_page">
+        <text class="page_text">页</text>
+        <input class="input_page" type="number" value="{{page}}" name="page" />
+      </view>
+      <view class="input_note_line">
+        <text class="line_text">行</text>
+        <input class="input_line" type="number" value="{{line}}" name="line" />
+      </view>
+      <button
+        style="margin-left: 5px; margin-right: 5px; padding: 8rpx"
+        class="comfirm_btn"
+        type="primary"
+        form-type="submit"
+      >
+        完成
+      </button>
+    </view>
+  </form>
+</view>
+<view class="notes_list">
+  <block wx:for="{{book.notes}}" wx:key="index">
+    <view id="note_{{index}}" class="note">
+      <view style="width: 100%; min-height: 280rpx; padding: 0px auto">
+        <mytext
+          content="{{item.desc}}"
+          index="{{index}}"
+          maxline="5"
+          onFold="{{item.onFold}}"
+          bind:hiddenBtn="hiddenBtn"
+          bind:showFoldTap="showFoldTap"
+        ></mytext>
+      </view>
+      <view class="note_info">
+        <text class="info_text" user-select
+          >{{formatDate.TimeToDate(item.date, 'YYYY-MM-DD hh:mm')}}</text
+        >
+        <text class="info_text" decode>{{notesUtils.showPageLine(item.page, item.line)}}</text>
+        <view class="note_func">
+          <view
+            class="icon-vector icon"
+            style="opacity: {{showFoldList[index] ? 0 : 1}};"
+            animation="{{item.animation}}"
+            data-showidx="{{index}}"
+            bindtap="showFoldTap"
+          ></view>
+          <view class="icon-edit icon" data-modifyidx="{{index}}" bindtap="modifyNote"> </view>
+          <view class="icon-delete icon" data-delidx="{{index}}" bindtap="deleteNote"></view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

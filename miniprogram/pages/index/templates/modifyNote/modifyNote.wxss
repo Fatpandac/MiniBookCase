@@ -1,0 +1,82 @@
+.modifyBox {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.input_note_func_box {
+  width: 90%;
+  height: 70rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.input_note_page {
+  height: 100%;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.page_text {
+  font-size: 35rpx;
+  line-height: 35rpx;
+  margin-right: 5px;
+}
+
+.input_page {
+  height: 100%;
+  border-radius: 10rpx;
+  padding-left: 5rpx;
+  background-color: #f0f0f0;
+}
+
+.input_note_line {
+  height: 100%;
+  margin-left: 5px;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.line_text {
+  font-size: 35rpx;
+  line-height: 35rpx;
+  margin-right: 5px;
+}
+
+.input_line {
+  height: 100%;
+  border-radius: 10rpx;
+  padding-left: 5rpx;
+  background-color: #f0f0f0;
+}
+.input_box {
+  width: 95%;
+  padding: 5px;
+  background-color: #f0f0f0;
+}
+
+.modifyTextarea {
+  width: 90%;
+  height: 30vh;
+  padding: 4px;
+  border-radius: 10rpx;
+  background-color: #f0f0f0;
+}
+
+.modify_note_button_list {
+  width: 90%;
+  margin-bottom: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@import './modifyNote-wxa-auto-dark.wxss';

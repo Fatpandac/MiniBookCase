@@ -1,0 +1,16 @@
+@media (prefers-color-scheme: dark) {
+  .cate_item_box_hover {
+    background-color: #777777;
+  }
+  .cate_item_choose_round {
+    /* TODO: 与图标颜色相同，需改 */
+    border: 1px solid white;
+  }
+  .cate_item_box {
+    border-bottom: 1px solid #ffffff25;
+  }
+
+  .cate_item_count {
+    color: #969696;
+  }
+}

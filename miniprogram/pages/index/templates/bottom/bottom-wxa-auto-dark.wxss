@@ -1,0 +1,26 @@
+@media (prefers-color-scheme: dark) {
+  .bottom_box {
+    background-color: rgb(17, 17, 17, 0.6);
+    backdrop-filter: blur(10px);
+  }
+
+  .bottom_button {
+    background: rgb(17, 17, 17);
+  }
+
+  .cate_item_box {
+    border-bottom: 1px solid #cfcfcf25;
+  }
+
+  .bottom_sueccss_button_text {
+    color: rgb(0, 106, 191);
+  }
+
+  .bottom_btn_text {
+    color: white;
+  }
+
+  .cate_list {
+    background: rgb(17, 17, 17);
+  }
+}

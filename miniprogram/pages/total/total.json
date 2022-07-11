@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "qiun-wx-ucharts": "../../components/qiun-wx-ucharts/index",
+    "dayGoal": "../../components/dayGoal/dayGoal",
+    "statCard": "../../components/statCard/statCard"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "light": {
+    "bgColor": "#ffffff",
+    "bookcasePath": "./image/bookcase.png",
+    "bookcaseSelectPath": "./image/bookcase_select.png",
+    "clockPath": "./image/timer.png",
+    "clockSelectPath": "./image/timer_select.png",
+    "totalPath": "./image/total.png",
+    "totalSelectPath": "./image/total_select.png",
+    "tabFontColor": "#000000",
+    "tabSelectedColor": "#3cc51f",
+    "tabBgColor": "#ffffff",
+    "tabBorderStyle": "black"
+  },
+  "dark": {
+    "bgColor": "#191919",
+    "bookcasePath": "./image/bookcase_dark.png",
+    "bookcaseSelectPath": "./image/bookcase_dark_select.png",
+    "clockPath": "./image/timer_dark.png",
+    "clockSelectPath": "./image/timer_dark_select.png",
+    "totalPath": "./image/total_dark.png",
+    "totalSelectPath": "./image/total_dark_select.png",
+    "tabFontColor": "#ffffff",
+    "tabSelectedColor": "#51a937",
+    "tabBgColor": "#191919",
+    "tabBorderStyle": "white"
+  }
+}

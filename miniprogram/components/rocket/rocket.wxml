@@ -1,0 +1,3 @@
+<view id="rocket" class="toppiing" bindtap="topping" animation="{{toppingAnimation}}">
+  <view class="icon-rocket" style="font-size: 70rpx; display: flex"></view>
+</view>

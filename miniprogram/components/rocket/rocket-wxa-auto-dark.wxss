@@ -1,0 +1,5 @@
+@media (prefers-color-scheme: dark) {
+  .toppiing {
+    background-color: rgb(0, 0, 0);
+  }
+}

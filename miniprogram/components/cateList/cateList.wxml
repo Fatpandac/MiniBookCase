@@ -1,0 +1,42 @@
+<wxs src="./utils.wxs" module="utils"></wxs>
+
+<scroll-view
+  style="{{extStyle}}"
+  class="cate_scroll_view"
+  scroll-y
+  scroll-with-animation
+  scroll-top="{{scrollPos}}"
+>
+  <block wx:for="{{cateList}}" wx:key="index">
+    <view
+      hover-class="cate_item_box_hover"
+      class="cate_item_box"
+      data-cate="{{item.text}}"
+      data-index="{{index}}"
+      bindtap="{{utils.isEnable(showAll, index) ? 'tapCateItem' : ''}}"
+    >
+      <view
+        class="{{utils.processIconSrc(item.text)}} cate_item_icon"
+        hidden="{{utils.showOrHideIcon(onEdit, index)}}"
+      ></view>
+      <view
+        style="{{item.isChoose ? 'background:#00a3ff;' : ''}}"
+        class="cate_item_choose_round"
+        hidden="{{utils.showOrHideRound(onEdit, index)}}"
+      ></view>
+      <text
+        style="{{utils.isEnable(showAll, index) ? '' : 'color: #cfcfcf;'}}"
+        class="cate_item_text"
+        >{{item.text}}</text
+      >
+      <text class="cate_item_count">{{item.count}}</text>
+      <view
+        class="icon-editcate cate_item_edit"
+        hidden="{{utils.showOrHideRound(onEdit, index)}}"
+        data-cate="{{item.text}}"
+        data-index="{{index}}"
+        catchtap="renameCate"
+      ></view>
+    </view>
+  </block>
+</scroll-view>

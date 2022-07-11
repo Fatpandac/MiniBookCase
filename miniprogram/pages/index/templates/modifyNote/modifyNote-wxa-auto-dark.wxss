@@ -1,0 +1,17 @@
+@media (prefers-color-scheme: dark) {
+  .input_page {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .input_line {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .input_box {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .modifyTextarea {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+}

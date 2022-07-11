@@ -1,0 +1,12 @@
+function processEnable(books) {
+  return books.filter(function(item) { return item.isChecked}).length > 0;
+}
+
+function processTheme(theme) {
+    return theme === 'dark'
+}
+
+module.exports = {
+  processEnable: processEnable,
+  processTheme: processTheme
+}

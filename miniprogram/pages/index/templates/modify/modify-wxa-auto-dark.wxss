@@ -1,0 +1,36 @@
+@media (prefers-color-scheme: dark) {
+  page {
+    background-color: rgb(17, 17, 17);
+  }
+  .form_style {
+    background-color: rgb(17, 17, 17);
+  }
+
+  .change_text_input {
+    background-color: rgb(28, 28, 28);
+    color: rgb(255, 255, 255, 0.6);
+  }
+
+  .intro_text {
+    color: rgb(128, 128, 128);
+  }
+
+  .intro_textarea {
+    background-color: rgb(28, 28, 28);
+  }
+
+  .change_text {
+    color: rgb(255, 255, 255, 0.87);
+  }
+  .intro_text {
+    color: rgb(255, 255, 255, 0.87);
+  }
+
+  .intro_textarea {
+    color: rgb(255, 255, 255, 0.6);
+  }
+
+  .modify_button {
+    background-color: rgb(17, 17, 17);
+  }
+}
